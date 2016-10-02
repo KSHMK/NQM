@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>700</width>
+    <height>490</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QPushButton" name="FindAP">
+    <property name="geometry">
+     <rect>
+      <x>270</x>
+      <y>400</y>
+      <width>131</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Start Find AP</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="StopDeAuth">
+    <property name="geometry">
+     <rect>
+      <x>550</x>
+      <y>400</y>
+      <width>131</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Stop DeAuth</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="FindVictim">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>400</y>
+      <width>131</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Start Find Target</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="textVictim">
+    <property name="geometry">
+     <rect>
+      <x>450</x>
+      <y>250</y>
+      <width>231</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Target</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="textchannel">
+    <property name="geometry">
+     <rect>
+      <x>450</x>
+      <y>130</y>
+      <width>231</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Channel</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="textAP">
+    <property name="geometry">
+     <rect>
+      <x>450</x>
+      <y>190</y>
+      <width>231</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>AP</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="textiface">
+    <property name="geometry">
+     <rect>
+      <x>450</x>
+      <y>70</y>
+      <width>231</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Interface</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="StartDeAuth">
+    <property name="geometry">
+     <rect>
+      <x>550</x>
+      <y>400</y>
+      <width>131</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Start DeAuth</string>
+    </property>
+    <property name="checkable">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>411</width>
+      <height>371</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="APtab">
+     <attribute name="title">
+      <string>AP</string>
+     </attribute>
+     <widget class="QTableWidget" name="APTable">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>390</width>
+        <height>321</height>
+       </rect>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="Victimtab">
+     <attribute name="title">
+      <string>Target</string>
+     </attribute>
+     <widget class="QTableWidget" name="VicTable">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>390</width>
+        <height>321</height>
+       </rect>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="StopVictim">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>400</y>
+      <width>131</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Stop Find Target</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="StopAP">
+    <property name="geometry">
+     <rect>
+      <x>270</x>
+      <y>400</y>
+      <width>131</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Stop Find AP</string>
+    </property>
+   </widget>
+   <zorder>FindAP</zorder>
+   <zorder>FindVictim</zorder>
+   <zorder>StopVictim</zorder>
+   <zorder>StopDeAuth</zorder>
+   <zorder>textVictim</zorder>
+   <zorder>textchannel</zorder>
+   <zorder>textAP</zorder>
+   <zorder>textiface</zorder>
+   <zorder>StartDeAuth</zorder>
+   <zorder>tabWidget</zorder>
+   <zorder>StopAP</zorder>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>700</width>
+     <height>25</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <tabstops>
+  <tabstop>tabWidget</tabstop>
+  <tabstop>APTable</tabstop>
+  <tabstop>VicTable</tabstop>
+  <tabstop>textiface</tabstop>
+  <tabstop>textchannel</tabstop>
+  <tabstop>textAP</tabstop>
+  <tabstop>textVictim</tabstop>
+  <tabstop>FindAP</tabstop>
+  <tabstop>FindVictim</tabstop>
+  <tabstop>StartDeAuth</tabstop>
+  <tabstop>StopDeAuth</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>
