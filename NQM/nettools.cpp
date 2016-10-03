@@ -1,5 +1,8 @@
 #include "nettools.h"
 #include <unistd.h>
+#include <sys/ioctl.h>
+#include <sys/socket.h>
+#include <linux/wireless.h>
 
 std::string trim(const std::string& str, const std::string& whitespaces=" \t\r\n")
 {
@@ -15,15 +18,14 @@ std::string trim(const std::string& str, const std::string& whitespaces=" \t\r\n
 
 bool NetTools::changechannel(uint32_t channel)
 {
-    string buf;
-    buf = "ifconfig "+iface+" up";
-    if(system(buf.c_str()) != 0)
+    struct iwreq wrq;
+    int skfd = socket(AF_INET,SOCK_DGRAM,0);
+    memset(&wrq,0,sizeof(wrq));
+    strncpy(wrq.ifr_name, iface.c_str(), IFNAMSIZ);
+    wrq.u.freq.e = 6;
+    wrq.u.freq.m = Utils::channel_to_mhz(channel);
+    if(ioctl(skfd,SIOCSIWFREQ,&wrq) < 0)
         return false;
-
-    buf = "iwconfig "+iface+" channel "+to_string(channel);
-    if(system(buf.c_str()) != 0)
-        return false;
-
     return true;
 }
 
