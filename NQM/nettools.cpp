@@ -31,7 +31,6 @@
 
     void iw_float2freq(double in,struct iw_freq* out)
     {
-        printf("in %lf\n",in);
         out->e = (short) (floor(log10(in)));
         if(out->e > 8)
         {
